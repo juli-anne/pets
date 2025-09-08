@@ -23,6 +23,7 @@ public class GetPetsService implements Query<Void, List<PetDTO>> {
     public ResponseEntity<List<PetDTO>> execute(Void input) {
         List<Pet> pets = petRepository.findAll();
         List<PetDTO> petsDTO = pets.stream().map(PetDTO::new).toList();
+        // return empty list, not an exception
         return ResponseEntity.status(HttpStatus.OK).body(petsDTO);
     }
 }

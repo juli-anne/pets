@@ -2,6 +2,7 @@ package com.julianne.pets.services;
 
 import com.julianne.pets.dtos.PetDTO;
 import com.julianne.pets.entities.Pet;
+import com.julianne.pets.exceptions.PetNotFoundException;
 import com.julianne.pets.repositories.PetRepository;
 import com.julianne.pets.utils.Command;
 import com.julianne.pets.utils.UpdateProductCommand;
@@ -28,6 +29,6 @@ public class UpdatePetService implements Command<UpdateProductCommand, PetDTO> {
             petRepository.save(pet);
             return ResponseEntity.ok(new PetDTO(pet));
         }
-        return null;
+        throw new PetNotFoundException();
     }
 }

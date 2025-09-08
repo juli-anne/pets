@@ -1,6 +1,7 @@
 package com.julianne.pets.services;
 
 import com.julianne.pets.entities.Pet;
+import com.julianne.pets.exceptions.PetNotFoundException;
 import com.julianne.pets.repositories.PetRepository;
 import com.julianne.pets.utils.Command;
 import org.springframework.http.HttpStatus;
@@ -25,6 +26,6 @@ public class DeletePetService  implements Command<Integer, Void> {
             petRepository.deleteById(id);
             return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
         }
-        return null;
+        throw new PetNotFoundException();
     }
 }

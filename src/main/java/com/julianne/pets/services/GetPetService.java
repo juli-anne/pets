@@ -2,6 +2,7 @@ package com.julianne.pets.services;
 
 import com.julianne.pets.dtos.PetDTO;
 import com.julianne.pets.entities.Pet;
+import com.julianne.pets.exceptions.PetNotFoundException;
 import com.julianne.pets.utils.Query;
 import com.julianne.pets.repositories.PetRepository;
 import org.springframework.http.ResponseEntity;
@@ -24,6 +25,6 @@ public class GetPetService implements Query<Integer, PetDTO> {
         if(petOptional.isPresent()) {
             return ResponseEntity.ok(new PetDTO(petOptional.get()));
         }
-        return null;
-}
+        throw new PetNotFoundException();
+    }
 }
