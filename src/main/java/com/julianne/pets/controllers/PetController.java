@@ -1,5 +1,7 @@
 package com.julianne.pets.controllers;
 
+import com.julianne.pets.services.*;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -9,28 +11,43 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 public class PetController {
 
+    // autowired - field injection - not recommended
+    @Autowired
+    private AddPetService addPetService;
+    private final GetPetsService getPetsService;
+    private final GetPetService getPetService;
+    private final UpdatePetService updatePetService;
+    private final DeletePetService deletePetService;
+
+    public PetController(GetPetsService getPetsService, GetPetService getPetService, UpdatePetService updatePetService, DeletePetService deletePetService) {
+        this.getPetsService = getPetsService;
+        this.getPetService = getPetService;
+        this.updatePetService = updatePetService;
+        this.deletePetService = deletePetService;
+    }
+
     @PostMapping("/add")
     public ResponseEntity<String> addPet() {
-        return ResponseEntity.status(HttpStatus.CREATED).body("You added a new pet!");
+        return addPetService.add();
     }
 
     @GetMapping("/pets")
     public ResponseEntity<String> getPets() {
-        return ResponseEntity.status(HttpStatus.OK).body("Here are the pets!");
+        return getPetsService.gets();
     }
 
     @GetMapping("/pet")
     public ResponseEntity<String> getPet() {
-        return ResponseEntity.status(HttpStatus.OK).body("Here is the pet you are looking for!");
+        return getPetService.get();
     }
 
     @PutMapping("update/{id}")
     public ResponseEntity<String> updatePet() {
-        return ResponseEntity.status(HttpStatus.OK).body("You updated a pet!");
+        return updatePetService.update();
     }
 
     @DeleteMapping("delete/{id}")
     public ResponseEntity<String> deletePet() {
-        return ResponseEntity.status(HttpStatus.NO_CONTENT).body("You deleted a pet!");
+        return deletePetService.delete();
     }
 }
