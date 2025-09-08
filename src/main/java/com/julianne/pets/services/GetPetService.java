@@ -25,6 +25,6 @@ public class GetPetService implements Query<Integer, PetDTO> {
         if(petOptional.isPresent()) {
             return ResponseEntity.ok(new PetDTO(petOptional.get()));
         }
-        throw new PetNotFoundException();
+        throw new PetNotFoundException("Pet name not found");
     }
 }

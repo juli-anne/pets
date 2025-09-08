@@ -10,7 +10,7 @@ public class PetDTO {
     private String type;
     private String name;
     private String breed;
-    private String age;
+    private Integer age;
 
     public PetDTO(Pet pet) {
         this.id = pet.getId();

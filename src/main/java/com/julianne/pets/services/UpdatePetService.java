@@ -6,7 +6,7 @@ import com.julianne.pets.exceptions.PetNotFoundException;
 import com.julianne.pets.repositories.PetRepository;
 import com.julianne.pets.utils.Command;
 import com.julianne.pets.utils.UpdateProductCommand;
-import org.springframework.http.HttpStatus;
+import com.julianne.pets.validators.PetValidator;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
@@ -26,9 +26,10 @@ public class UpdatePetService implements Command<UpdateProductCommand, PetDTO> {
         if (optionalPet.isPresent()) {
             Pet pet = optionalPet.get();
             pet.setId(command.getId());
+            PetValidator.execute(pet);
             petRepository.save(pet);
             return ResponseEntity.ok(new PetDTO(pet));
         }
-        throw new PetNotFoundException();
+        throw new PetNotFoundException("Pet name not found");
     }
 }

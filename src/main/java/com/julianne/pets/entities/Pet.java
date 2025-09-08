@@ -23,5 +23,5 @@ public class Pet {
     private String breed;
 
     @Column(name = "age")
-    private String age;
+    private Integer age;
 }

@@ -26,6 +26,6 @@ public class DeletePetService  implements Command<Integer, Void> {
             petRepository.deleteById(id);
             return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
         }
-        throw new PetNotFoundException();
+        throw new PetNotFoundException("Pet name not found");
     }
 }
