@@ -12,42 +12,43 @@ import org.springframework.web.bind.annotation.*;
 public class PetController {
 
     // autowired - field injection - not recommended
-    @Autowired
-    private AddPetService addPetService;
+    private final AddPetService addPetService;
     private final GetPetsService getPetsService;
     private final GetPetService getPetService;
     private final UpdatePetService updatePetService;
     private final DeletePetService deletePetService;
 
-    public PetController(GetPetsService getPetsService, GetPetService getPetService, UpdatePetService updatePetService, DeletePetService deletePetService) {
+    // constructor injection
+    public PetController(GetPetsService getPetsService, GetPetService getPetService, UpdatePetService updatePetService, DeletePetService deletePetService, AddPetService addPetService) {
         this.getPetsService = getPetsService;
         this.getPetService = getPetService;
         this.updatePetService = updatePetService;
         this.deletePetService = deletePetService;
+        this.addPetService = addPetService;
     }
 
     @PostMapping("/add")
     public ResponseEntity<String> addPet() {
-        return addPetService.add();
+        return addPetService.execute(null);
     }
 
     @GetMapping("/pets")
     public ResponseEntity<String> getPets() {
-        return getPetsService.gets();
+        return getPetsService.execute(null);
     }
 
     @GetMapping("/pet")
     public ResponseEntity<String> getPet() {
-        return getPetService.get();
+        return getPetService.execute(null);
     }
 
-    @PutMapping("update/{id}")
+    @PutMapping("update")
     public ResponseEntity<String> updatePet() {
-        return updatePetService.update();
+        return updatePetService.execute(null);
     }
 
-    @DeleteMapping("delete/{id}")
+    @DeleteMapping("delete")
     public ResponseEntity<String> deletePet() {
-        return deletePetService.delete();
+        return deletePetService.execute(null);
     }
 }
