@@ -13,6 +13,6 @@ public class PetNotFoundException extends RuntimeException {
 
     public PetNotFoundException(String petNotFoundException) {
         super(ErrorMessage.PET_NOT_FOUND.getMessage());
-        logger.error("Exception " + getClass() + " thrown.");
+        logger.error("Exception {} thrown.", getClass());
     }
 }

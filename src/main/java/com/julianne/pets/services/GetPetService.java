@@ -7,6 +7,7 @@ import com.julianne.pets.utils.Query;
 import com.julianne.pets.repositories.PetRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
@@ -24,8 +25,9 @@ public class GetPetService implements Query<Integer, PetDTO> {
     }
 
     @Override
+    @Cacheable("petCache")
     public ResponseEntity<PetDTO> execute(Integer id) {
-        logger.info("Executing " + getClass() + " input: " + id);
+        logger.info("Executing {} input: {}", getClass(), id);
 
         Optional <Pet> petOptional = petRepository.findById(id);
         if(petOptional.isPresent()) {

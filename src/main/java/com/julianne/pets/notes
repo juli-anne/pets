@@ -53,3 +53,12 @@ logging - replace sout with logger.info
 5. debug / trace
 - log aggregator - splunk - sends logs to a central location so you can document & search through them
 / SLF4J - simple logging facade for java - others: log4j, logback, java util logging
+
+caching - moving some data from the database to a memory on the server - quicker response time
+// do - when data doesn't change often or many users are trying to get the same data all at once
+// don't - when it has to be 100% correct and up to date, if performance isn't an issue
+- cache manager - SB default cache annotations
+1. EnableCaching
+2. Cacheable
+3. CacheEvict
+4. CachePut
