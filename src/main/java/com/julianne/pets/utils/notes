@@ -28,3 +28,9 @@ unit testing
  @injectmocks - service class we are testing
  @beforeeach - test up (initiate the mock object)
  @test - for each test we write
+
+
+ headers
+ 1. accept - what kind of media you can receive (return either JSON/XML)
+ 2. authorization
+ 3. cookies
