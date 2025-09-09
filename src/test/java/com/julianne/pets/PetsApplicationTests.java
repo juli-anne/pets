@@ -8,6 +8,7 @@ class PetsApplicationTests {
 
     @Test
     void contextLoads() {
+        // sanity check - a test that should always pass
     }
 
 }

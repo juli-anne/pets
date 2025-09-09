@@ -1,0 +1,30 @@
+////
+some notes I took while learning
+////
+
+layers of abstraction
+1. database (mySQL) - interact with it through SQL queries
+2. JDBC (Java Database Connectivity) - connects Java code to mySQL database, the connection is being set up in application.properties
+3. Hibernate (default Spring Boot ORM - Object Relational Mapper) - implements JPA rules, maps Java Objects to relationships in the database
+   //// other ORMs - OpenJPA, MyBatis
+   //// the company that builds houses and follows the laws of the government (JPA)
+4. JPA (Java Persistence API) - rules to connect Java to the SQL database
+   //// the government making a list of rules to build a house
+5. Spring Data JPA - lets you write plain english and spring does the conversion with the orm to autogenerate the sql query for you
+   //// because there is a way where you could be just writing queries in the code
+
+
+unit testing
+ / tests are written in given/when/then format - arrange/act/assert
+ // given a product exists, when user gets product by id, then return a product dto
+ /// don't test things built into spring (service, restcontroller, controller endpoints, .save method from jpa)
+ //// don't interact with database
+
+ ///// test code we wrote - dto constructors, service logic, validators
+ ///// should test every logical path for the program to take
+ ///// paths: finds product - return dto && can't find product - throw product not found exception
+
+ @mock - mock the response from the repository
+ @injectmocks - service class we are testing
+ @beforeeach - test up (initiate the mock object)
+ @test - for each test we write
