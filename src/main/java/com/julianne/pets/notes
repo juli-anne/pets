@@ -44,3 +44,12 @@ unit testing
  json ignore
  - when constructing the JSON response there was a circular reference,
    with this you ignore the property when constructing JSON to avoid circular reference
+
+logging - replace sout with logger.info
+1. fatal - app crash
+2. error - error but app keeps running
+3. warn - many lead to an error
+4. info - show progress of app
+5. debug / trace
+- log aggregator - splunk - sends logs to a central location so you can document & search through them
+/ SLF4J - simple logging facade for java - others: log4j, logback, java util logging

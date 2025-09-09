@@ -4,7 +4,7 @@ import com.julianne.pets.dtos.PetDTO;
 import com.julianne.pets.entities.Pet;
 import com.julianne.pets.services.*;
 import com.julianne.pets.utils.SearchCriteria;
-import com.julianne.pets.utils.UpdateProductCommand;
+import com.julianne.pets.utils.UpdatePetCommand;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -59,7 +59,7 @@ public class PetController {
 
     @PutMapping("update/{id}")
     public ResponseEntity<PetDTO> updatePet(@PathVariable Integer id, @RequestBody Pet pet) {
-        return updatePetService.execute(new UpdateProductCommand(id, pet));
+        return updatePetService.execute(new UpdatePetCommand(id, pet));
     }
 
     @DeleteMapping("delete/{id}")
