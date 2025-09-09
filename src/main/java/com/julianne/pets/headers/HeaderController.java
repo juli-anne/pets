@@ -26,7 +26,7 @@ public class HeaderController {
             default -> "Region not supported";
         };
     }
-    
+
     @GetMapping(value = "/header/pet", produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE})
     public ResponseEntity<Pet> getPet() {
         Pet pet = new Pet();

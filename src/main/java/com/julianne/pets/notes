@@ -34,3 +34,13 @@ unit testing
  1. accept - what kind of media you can receive (return either JSON/XML)
  2. authorization
  3. cookies
+
+
+ cascade / fetch
+ 1. CascadeType.All - if you update the Customer it wll automatically update the address
+ 2. FetchType.EAGER - when getting a Customer automatically get the Address
+ 3. FetchType.LAZY - when getting a Customer don't automatically get the Address
+
+ json ignore
+ - when constructing the JSON response there was a circular reference,
+   with this you ignore the property when constructing JSON to avoid circular reference
