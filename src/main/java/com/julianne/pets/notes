@@ -62,3 +62,8 @@ caching - moving some data from the database to a memory on the server - quicker
 2. Cacheable
 3. CacheEvict
 4. CachePut
+
+external apis - needed when getting data from someone else's backend
+// you want the weather data - ping the service and return what you need
+// apps using someone else's backend for your authentication
+- use Rest Template - HTTP client from Spring - allows us to make HTTP requests
