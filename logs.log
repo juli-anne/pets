@@ -34,3 +34,11 @@ This generated password is for development use only. Your security configuration
 2025-09-14T09:43:14.695+02:00  INFO 23424 --- [pets] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
 2025-09-14T09:43:14.844+02:00  INFO 23424 --- [pets] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
 2025-09-14T09:43:14.850+02:00  INFO 23424 --- [pets] [main] com.julianne.pets.PetsApplication        : Started PetsApplication in 6.451 seconds (process running for 9.852)
+2025-09-14T10:23:21.989+02:00  INFO 23424 --- [pets] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-09-14T10:23:21.992+02:00  INFO 23424 --- [pets] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-09-14T10:23:22.008+02:00  INFO 23424 --- [pets] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 16 ms
+2025-09-14T11:37:43.483+02:00  INFO 23424 --- [pets] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-09-14T11:37:43.496+02:00  INFO 23424 --- [pets] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-09-14T11:37:43.525+02:00  INFO 23424 --- [pets] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-09-14T11:37:43.536+02:00  INFO 23424 --- [pets] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-09-14T11:37:43.541+02:00  INFO 23424 --- [pets] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
