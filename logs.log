@@ -1,20 +1,20 @@
-2025-09-11T18:40:27.315+02:00  INFO 16952 --- [pets] [main] com.julianne.pets.PetsApplication        : Starting PetsApplication using Java 24.0.2 with PID 16952 (D:\working-on\java\pets\target\classes started by USER in D:\working-on\java\pets)
-2025-09-11T18:40:27.319+02:00  INFO 16952 --- [pets] [main] com.julianne.pets.PetsApplication        : No active profile set, falling back to 1 default profile: "default"
-2025-09-11T18:40:28.054+02:00  INFO 16952 --- [pets] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-09-11T18:40:28.111+02:00  INFO 16952 --- [pets] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 49 ms. Found 2 JPA repository interfaces.
-2025-09-11T18:40:28.544+02:00  INFO 16952 --- [pets] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2025-09-11T18:40:28.557+02:00  INFO 16952 --- [pets] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-09-11T18:40:28.557+02:00  INFO 16952 --- [pets] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.44]
-2025-09-11T18:40:28.600+02:00  INFO 16952 --- [pets] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-09-11T18:40:28.600+02:00  INFO 16952 --- [pets] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1243 ms
-2025-09-11T18:40:28.715+02:00  INFO 16952 --- [pets] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-09-11T18:40:29.177+02:00  INFO 16952 --- [pets] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@72c9ebfa
-2025-09-11T18:40:29.179+02:00  INFO 16952 --- [pets] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-09-11T18:40:29.213+02:00  INFO 16952 --- [pets] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-09-11T18:40:29.261+02:00  INFO 16952 --- [pets] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.26.Final
-2025-09-11T18:40:29.291+02:00  INFO 16952 --- [pets] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-09-11T18:40:29.541+02:00  INFO 16952 --- [pets] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-09-11T18:40:29.638+02:00  INFO 16952 --- [pets] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+2025-09-14T09:43:09.324+02:00  INFO 23424 --- [pets] [main] com.julianne.pets.PetsApplication        : Starting PetsApplication using Java 24.0.2 with PID 23424 (D:\working-on\java\pets\target\classes started by USER in D:\working-on\java\pets)
+2025-09-14T09:43:09.334+02:00  INFO 23424 --- [pets] [main] com.julianne.pets.PetsApplication        : No active profile set, falling back to 1 default profile: "default"
+2025-09-14T09:43:10.755+02:00  INFO 23424 --- [pets] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-09-14T09:43:10.825+02:00  INFO 23424 --- [pets] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 60 ms. Found 2 JPA repository interfaces.
+2025-09-14T09:43:11.443+02:00  INFO 23424 --- [pets] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-09-14T09:43:11.460+02:00  INFO 23424 --- [pets] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-09-14T09:43:11.460+02:00  INFO 23424 --- [pets] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.44]
+2025-09-14T09:43:11.513+02:00  INFO 23424 --- [pets] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-09-14T09:43:11.513+02:00  INFO 23424 --- [pets] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2103 ms
+2025-09-14T09:43:11.664+02:00  INFO 23424 --- [pets] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-09-14T09:43:12.152+02:00  INFO 23424 --- [pets] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@77c66a4f
+2025-09-14T09:43:12.155+02:00  INFO 23424 --- [pets] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-09-14T09:43:12.198+02:00  INFO 23424 --- [pets] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-09-14T09:43:12.254+02:00  INFO 23424 --- [pets] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.26.Final
+2025-09-14T09:43:12.288+02:00  INFO 23424 --- [pets] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-09-14T09:43:12.591+02:00  INFO 23424 --- [pets] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-09-14T09:43:12.709+02:00  INFO 23424 --- [pets] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
 	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
 	Database driver: undefined/unknown
 	Database version: 8.0.43
@@ -22,28 +22,15 @@
 	Isolation level: undefined/unknown
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2025-09-11T18:40:30.298+02:00  INFO 16952 --- [pets] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-09-11T18:40:30.301+02:00  INFO 16952 --- [pets] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-09-11T18:40:30.658+02:00  WARN 16952 --- [pets] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-09-11T18:40:30.959+02:00  INFO 16952 --- [pets] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2025-09-11T18:40:30.964+02:00  INFO 16952 --- [pets] [main] com.julianne.pets.PetsApplication        : Started PetsApplication in 4.034 seconds (process running for 5.037)
-2025-09-11T19:26:45.224+02:00  INFO 16952 --- [pets] [http-nio-8080-exec-1] o.apache.coyote.http11.Http11Processor   : Error parsing HTTP request header
- Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+2025-09-14T09:43:13.477+02:00  INFO 23424 --- [pets] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-09-14T09:43:13.480+02:00  INFO 23424 --- [pets] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-09-14T09:43:14.153+02:00  WARN 23424 --- [pets] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-09-14T09:43:14.688+02:00  WARN 23424 --- [pets] [main] .s.s.UserDetailsServiceAutoConfiguration : 
 
-java.lang.IllegalArgumentException: Invalid character found in method name [0x160x030x010x000xf30x010x000x000xef0x030x030x1c<0xbf0x1a0x1b`0xebkn0xeb0x0da0xa7%;I0xfenX0xe80xdb0xddu0xf4j(0xaeM0xd50xb30xcc0xdd ]. HTTP method names must be tokens
-	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:403) ~[tomcat-embed-core-10.1.44.jar:10.1.44]
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:271) ~[tomcat-embed-core-10.1.44.jar:10.1.44]
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.44.jar:10.1.44]
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903) ~[tomcat-embed-core-10.1.44.jar:10.1.44]
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1769) ~[tomcat-embed-core-10.1.44.jar:10.1.44]
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.44.jar:10.1.44]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189) ~[tomcat-embed-core-10.1.44.jar:10.1.44]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658) ~[tomcat-embed-core-10.1.44.jar:10.1.44]
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.44.jar:10.1.44]
-	at java.base/java.lang.Thread.run(Thread.java:1447) ~[na:na]
+Using generated security password: 23e1d3e0-cbe6-4e34-a41e-5503e4b32bb4
 
-2025-09-11T19:28:16.191+02:00  INFO 16952 --- [pets] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
-2025-09-11T19:28:16.195+02:00  INFO 16952 --- [pets] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
-2025-09-11T19:28:16.198+02:00  INFO 16952 --- [pets] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-09-11T19:28:16.200+02:00  INFO 16952 --- [pets] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-09-11T19:28:16.202+02:00  INFO 16952 --- [pets] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-09-14T09:43:14.695+02:00  INFO 23424 --- [pets] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-09-14T09:43:14.844+02:00  INFO 23424 --- [pets] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-09-14T09:43:14.850+02:00  INFO 23424 --- [pets] [main] com.julianne.pets.PetsApplication        : Started PetsApplication in 6.451 seconds (process running for 9.852)
