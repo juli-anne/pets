@@ -93,3 +93,23 @@ spring security flow
 7. the method validates the credentials
 8. if valid it gets added to the security context
 9. if invalid it denies the request
+
+startup and the spring container
+- on startup spring runs around scanning for annotations
+- each component is instantiated and kept in memory
+- each component is put in the spring container as a bean
+// the spring container is a box that holds all the objects, once in it we can use it across the application through dependency injection
+/// ex. a controller reaches in sc to get the service class
+
+dependency injection uses:
+- when we want one instance of the object (Singleton) - memory and cpu efficient, setup object properties once and for the whole app
+
+  @Bean - must create a new instance then spring puts it in the container
+  @Component - doesn't return a new instance, spring automatically puts it in the container
+
+  inverse of control (IoC) - invert the control of instancing object, give that responsibility to spring, essentially don't write the "new" keyword
+  // instead of us doing it we give the control to spring
+
+actuator
+// allows you to monitor the health & status of your app during runtime, a control panel
+/// sees endpoints defined, beans in the spring container, metrics etc.
