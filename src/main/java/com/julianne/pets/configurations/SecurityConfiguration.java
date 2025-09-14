@@ -1,5 +1,6 @@
 package com.julianne.pets.configurations;
 
+import com.julianne.pets.jwt.jwtAuthenticationFilter;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -53,13 +54,16 @@ public class SecurityConfiguration {
         return httpSecurity
                 .csrf(AbstractHttpConfigurer::disable)
                 .authorizeHttpRequests(authorize -> authorize
+                        .requestMatchers("/login").permitAll()
                         .requestMatchers("/createuser").permitAll()
                         .anyRequest().authenticated()
                 )
-                .addFilterBefore(
-                        new BasicAuthenticationFilter(authenticationManager(httpSecurity)),
-                        UsernamePasswordAuthenticationFilter.class
-                )
+                .addFilterBefore(jwtAuthenticationFilter(), UsernamePasswordAuthenticationFilter.class)
                 .build();
+    }
+
+    @Bean
+    public jwtAuthenticationFilter jwtAuthenticationFilter() {
+        return new jwtAuthenticationFilter();
     }
 }
