@@ -81,3 +81,15 @@ authorization - set up in 2 ways:
 // authority - what you can do - special or basic access
 // roles - who you are - manager, employee
 /// security filter chain or method level security
+//// this is using the UserDetailsService in memory
+
+spring security flow
+1. a http request comes in
+2. it goes through the security filter chain
+3. if the basic auth is in the header then the basic auth filter triggered
+4. basic auth filter then calls the auth manager
+5. auth manager calls the user details service
+6. user details service than calls the loadUserByUsername method
+7. the method validates the credentials
+8. if valid it gets added to the security context
+9. if invalid it denies the request
