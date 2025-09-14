@@ -76,3 +76,8 @@ authentication
 cross site request forgery
 // only works for get's - to work on others you need to disable csrf
 /// because get only looks at resources while others mutate the underlying data
+
+authorization - set up in 2 ways:
+// authority - what you can do - special or basic access
+// roles - who you are - manager, employee
+/// security filter chain or method level security

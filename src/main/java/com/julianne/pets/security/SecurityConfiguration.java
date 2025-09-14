@@ -22,10 +22,17 @@ public class SecurityConfiguration {
 
             UserDetails admin = User
                     .withUsername("admin")
+                    .authorities("basic", "special")
                     .password(passwordEncoder().encode("1")) // can't be raw text, so we encode it
                     .build();
 
-            return new InMemoryUserDetailsManager(admin);
+            UserDetails user = User
+                    .withUsername("user")
+                    .authorities("basic")
+                    .password(passwordEncoder().encode("2"))
+                    .build();
+
+            return new InMemoryUserDetailsManager(admin, user);
     }
 
     @Bean
@@ -43,6 +50,9 @@ public class SecurityConfiguration {
                     authorize.requestMatchers("/open").permitAll();
                     authorize.requestMatchers("/closed").authenticated();
                     authorize.requestMatchers(HttpMethod.POST, "/add").authenticated(); // csrf
+
+                    authorize.requestMatchers(HttpMethod.GET, "/special").hasAuthority("special");
+                    authorize.requestMatchers(HttpMethod.GET, "/basic").hasAuthority("basic");
                 })
                 .httpBasic(Customizer.withDefaults()) // for basic authentication
                 .build();
