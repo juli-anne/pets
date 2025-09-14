@@ -67,3 +67,12 @@ external apis - needed when getting data from someone else's backend
 // you want the weather data - ping the service and return what you need
 // apps using someone else's backend for your authentication
 - use Rest Template - HTTP client from Spring - allows us to make HTTP requests
+
+authentication
+// authenticated endpoint - need to provide credentials to access
+// unauthenticated endpoint - don't need to provide credentials to access
+/// web shops - you can browse products but can't purchase them or add the to the wishlist
+
+cross site request forgery
+// only works for get's - to work on others you need to disable csrf
+/// because get only looks at resources while others mutate the underlying data
